@@ -136,6 +136,16 @@ textarea {
 	width: 30%;
 	height: 2.5em;
 }
+#thank {
+	position: absolute;
+	top: 40%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-size: 5em;
+	color: white;
+}
 @media only screen and (max-width:1024px) {
 	.text, .drop-down, .button {
 		width: 35%;
@@ -151,6 +161,9 @@ textarea {
 	h1 {
 		font-size: 3em;
 	}
+	#thank {
+		font-size: 3em;
+	}
 }
 @media only screen and (max-width:425px) {
     .text, .drop-down, .button {
@@ -162,6 +175,9 @@ textarea {
 	#astronaut {
 		display: none;
 	}
+	#thank {
+		font-size: 2.5em;
+	}
 }
 @media only screen and (max-width:375px) {
     .text, .drop-down, .button {
@@ -172,5 +188,8 @@ textarea {
 	}
 	#astronaut {
 		display: none;
+	}
+	#thank {
+		font-size: 2.5em;
 	}
 }
