@@ -59,7 +59,8 @@
 			);
 		},
 		move: function() {
-			var tp = Functions.getRandomInt(0, window.innerHeight-200) + 'px';
+			console.log('moving');
+			var tp = Functions.getRandomInt(-200, window.innerHeight+200) + 'px';
 			var lft = Functions.getRandomInt(0, (window.innerWidth/6) + 200) + 'px';
 			$('#astronaut').animate( {
 				left: lft,
@@ -70,7 +71,10 @@
 			return Math.floor(Math.random() * (max - min + 1)) + min;		
 		},
 		callInterval : function() {
-			setInterval(Functions.move(),10000);
+			console.log('call interval');
+			setInterval(function(){
+				Functions.move();
+			},10001);
 		},
 					
 	};
@@ -80,6 +84,8 @@
 		Functions.addStars();
 		Functions.twinkle();
 		Functions.move();
-		setTimeout(Functions.callInterval(), 10000);
+		setTimeout(function(){
+			Functions.callInterval();
+		}, 10001);
 	});
 })(document, jQuery(document), jQuery);
