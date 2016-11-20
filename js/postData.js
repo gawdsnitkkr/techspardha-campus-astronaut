@@ -7,6 +7,8 @@ function postToGoogle() {
 			var cmt1 = $('#cmt1').val();
 			var cmt2 = $('#cmt2').val();
 			var cmt3 = $('#cmt3').val();
+			var submitButton = $('#submitButton');
+			submitButton.val('Submitting...');
          	$.ajax({
                 	url: "https://docs.google.com/forms/d/e/1FAIpQLSe8qPXKvTOCxrsfLgqwGYjda0TckC66eN8-8VcU4HhdVa3nIg/formResponse",
 					data: {"entry.2094364885": name, 
@@ -22,7 +24,9 @@ function postToGoogle() {
                 	dataType: "xml",
           			statusCode: {
                         0: function() {
-                            window.location.replace("thankYou.html");
+                            alert('Something went wrong! Try again');
+                            window.location.replace("index.html");
+
                         },
                         200: function() {
                             window.location.replace("thankYou.html");
